@@ -1,0 +1,116 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 8 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet  restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\anton\Diplom\Benchmark\bin\Release\net8.0\0f9989d6-a7ce-4a1f-b8b6-0c932794bbd4
+// command took 0.66 sec and exited with 0
+// start dotnet  build -c Release --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\anton\Diplom\Benchmark\bin\Release\net8.0\0f9989d6-a7ce-4a1f-b8b6-0c932794bbd4
+// command took 1.7 sec and exited with 0
+// ***** Done, took 00:00:02 (2.41 sec)   *****
+// Found 8 benchmarks:
+//   BenchmarkService.RunLoadArticles: Job-SKSQVE(LaunchCount=10, RunStrategy=ColdStart)
+//   BenchmarkService.RunGetArticles: Job-SKSQVE(LaunchCount=10, RunStrategy=ColdStart)
+//   BenchmarkService.RunSearch: Job-SKSQVE(LaunchCount=10, RunStrategy=ColdStart)
+//   BenchmarkService.RunPublishArticle: Job-SKSQVE(LaunchCount=10, RunStrategy=ColdStart)
+//   BenchmarkService.RunDeleteArticle: Job-SKSQVE(LaunchCount=10, RunStrategy=ColdStart)
+//   BenchmarkService.RunEditArticle: Job-SKSQVE(LaunchCount=10, RunStrategy=ColdStart)
+//   BenchmarkService.RunGetCategoryByName: Job-SKSQVE(LaunchCount=10, RunStrategy=ColdStart)
+//   BenchmarkService.RunGetCategoryById: Job-SKSQVE(LaunchCount=10, RunStrategy=ColdStart)
+
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: Высокая производительность)
+// **************************
+// Benchmark: BenchmarkService.RunLoadArticles: Job-SKSQVE(LaunchCount=10, RunStrategy=ColdStart)
+// *** Execute ***
+// Launch: 1 / 10
+// Execute: dotnet 0f9989d6-a7ce-4a1f-b8b6-0c932794bbd4.dll --anonymousPipes 1312 1776 --benchmarkName BenchmarkWebApp.BenchmarkService.RunLoadArticles --job "LaunchCount=10, RunStrategy=ColdStart" --benchmarkId 0 in C:\Users\anton\Diplom\Benchmark\bin\Release\net8.0\0f9989d6-a7ce-4a1f-b8b6-0c932794bbd4\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 8.0.2 (8.0.224.6711), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni,SERIALIZE VectorSize=256
+// Job: Job-DKZTAG(LaunchCount=10, RunStrategy=ColdStart)
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 1433650100.00 ns, 1.4337 s/op
+WorkloadActual   2: 1 op, 948997800.00 ns, 948.9978 ms/op
+WorkloadActual   3: 1 op, 1180097700.00 ns, 1.1801 s/op
+WorkloadActual   4: 1 op, 1218215300.00 ns, 1.2182 s/op
+WorkloadActual   5: 1 op, 1320354900.00 ns, 1.3204 s/op
+WorkloadActual   6: 1 op, 1548669700.00 ns, 1.5487 s/op
+WorkloadActual   7: 1 op, 1784888100.00 ns, 1.7849 s/op
+WorkloadActual   8: 1 op, 1983892900.00 ns, 1.9839 s/op
+WorkloadActual   9: 1 op, 2231980600.00 ns, 2.2320 s/op
+WorkloadActual  10: 1 op, 2434978300.00 ns, 2.4350 s/op
+WorkloadActual  11: 1 op, 2708696300.00 ns, 2.7087 s/op
+WorkloadActual  12: 1 op, 2995381200.00 ns, 2.9954 s/op
+WorkloadActual  13: 1 op, 3241723000.00 ns, 3.2417 s/op
+WorkloadActual  14: 1 op, 3506792500.00 ns, 3.5068 s/op
+WorkloadActual  15: 1 op, 3683536400.00 ns, 3.6835 s/op
+WorkloadActual  16: 1 op, 3989503600.00 ns, 3.9895 s/op
+WorkloadActual  17: 1 op, 4127998500.00 ns, 4.1280 s/op
+WorkloadActual  18: 1 op, 4535365100.00 ns, 4.5354 s/op
+WorkloadActual  19: 1 op, 4983921600.00 ns, 4.9839 s/op
+WorkloadActual  20: 1 op, 5836068800.00 ns, 5.8361 s/op
+WorkloadActual  21: 1 op, 6177556800.00 ns, 6.1776 s/op
+WorkloadActual  22: 1 op, 5403127500.00 ns, 5.4031 s/op
+WorkloadActual  23: 1 op, 5508180500.00 ns, 5.5082 s/op
+WorkloadActual  24: 1 op, 5769976700.00 ns, 5.7700 s/op
+WorkloadActual  25: 1 op, 6069135900.00 ns, 6.0691 s/op
+WorkloadActual  26: 1 op, 6192368400.00 ns, 6.1924 s/op
+WorkloadActual  27: 1 op, 6432792800.00 ns, 6.4328 s/op
+WorkloadActual  28: 1 op, 6687019300.00 ns, 6.6870 s/op
+WorkloadActual  29: 1 op, 7012019500.00 ns, 7.0120 s/op
+WorkloadActual  30: 1 op, 7111448800.00 ns, 7.1114 s/op
+WorkloadActual  31: 1 op, 7253450200.00 ns, 7.2535 s/op
+WorkloadActual  32: 1 op, 7504781800.00 ns, 7.5048 s/op
+WorkloadActual  33: 1 op, 7737348500.00 ns, 7.7373 s/op
+WorkloadActual  34: 1 op, 8035963800.00 ns, 8.0360 s/op
+WorkloadActual  35: 1 op, 8310805400.00 ns, 8.3108 s/op
+WorkloadActual  36: 1 op, 8392063900.00 ns, 8.3921 s/op
+WorkloadActual  37: 1 op, 8661672200.00 ns, 8.6617 s/op
+WorkloadActual  38: 1 op, 8822094100.00 ns, 8.8221 s/op
+WorkloadActual  39: 1 op, 9127776200.00 ns, 9.1278 s/op
+WorkloadActual  40: 1 op, 9368427800.00 ns, 9.3684 s/op
+WorkloadActual  41: 1 op, 9614504300.00 ns, 9.6145 s/op
+WorkloadActual  42: 1 op, 9899994900.00 ns, 9.9000 s/op
+WorkloadActual  43: 1 op, 10058996400.00 ns, 10.0590 s/op
+WorkloadActual  44: 1 op, 10187281300.00 ns, 10.1873 s/op
+WorkloadActual  45: 1 op, 10353635700.00 ns, 10.3536 s/op
+WorkloadActual  46: 1 op, 10518272000.00 ns, 10.5183 s/op
+WorkloadActual  47: 1 op, 10969564900.00 ns, 10.9696 s/op
+WorkloadActual  48: 1 op, 11227868400.00 ns, 11.2279 s/op
+WorkloadActual  49: 1 op, 11415722900.00 ns, 11.4157 s/op
+WorkloadActual  50: 1 op, 11506656800.00 ns, 11.5067 s/op
+WorkloadActual  51: 1 op, 11862499200.00 ns, 11.8625 s/op
+WorkloadActual  52: 1 op, 12040633000.00 ns, 12.0406 s/op
+WorkloadActual  53: 1 op, 12195877800.00 ns, 12.1959 s/op
+WorkloadActual  54: 1 op, 12386715200.00 ns, 12.3867 s/op
+WorkloadActual  55: 1 op, 12523309500.00 ns, 12.5233 s/op
+WorkloadActual  56: 1 op, 12796723100.00 ns, 12.7967 s/op
+WorkloadActual  57: 1 op, 13143349400.00 ns, 13.1433 s/op
+WorkloadActual  58: 1 op, 17400685100.00 ns, 17.4007 s/op
+WorkloadActual  59: 1 op, 14121251900.00 ns, 14.1213 s/op
+WorkloadActual  60: 1 op, 13963206900.00 ns, 13.9632 s/op
+WorkloadActual  61: 1 op, 14189083900.00 ns, 14.1891 s/op
+WorkloadActual  62: 1 op, 14356663900.00 ns, 14.3567 s/op
+WorkloadActual  63: 1 op, 14383458000.00 ns, 14.3835 s/op
+WorkloadActual  64: 1 op, 14501289400.00 ns, 14.5013 s/op
+WorkloadActual  65: 1 op, 14971548000.00 ns, 14.9715 s/op
+WorkloadActual  66: 1 op, 15348025500.00 ns, 15.3480 s/op
+WorkloadActual  67: 1 op, 15461338400.00 ns, 15.4613 s/op
+WorkloadActual  68: 1 op, 15864806500.00 ns, 15.8648 s/op
+WorkloadActual  69: 1 op, 16149286800.00 ns, 16.1493 s/op
+WorkloadActual  70: 1 op, 16109423000.00 ns, 16.1094 s/op
+WorkloadActual  71: 1 op, 16168931600.00 ns, 16.1689 s/op
+WorkloadActual  72: 1 op, 16562888000.00 ns, 16.5629 s/op
+WorkloadActual  73: 1 op, 16918967000.00 ns, 16.9190 s/op
+WorkloadActual  74: 1 op, 17115240100.00 ns, 17.1152 s/op
+WorkloadActual  75: 1 op, 17055747900.00 ns, 17.0557 s/op
+WorkloadActual  76: 1 op, 17388823000.00 ns, 17.3888 s/op
+WorkloadActual  77: 1 op, 17868612900.00 ns, 17.8686 s/op
+WorkloadActual  78: 1 op, 18070557000.00 ns, 18.0706 s/op
+WorkloadActual  79: 1 op, 17954531600.00 ns, 17.9545 s/op
+WorkloadActual  80: 1 op, 18814365200.00 ns, 18.8144 s/op
+WorkloadActual  81: 1 op, 18698156000.00 ns, 18.6982 s/op

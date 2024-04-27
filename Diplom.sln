@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Benchmark", "Benchmark\Benchmark.csproj", "{F6D66BA3-7221-49C3-9DFF-A33E450C3986}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApp", "WebApp", "{0A99DA6F-F594-4276-81D9-F7F9F7827D03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsReader", "WebApp\NewsReader\NewsReader.csproj", "{55DE41C5-C07E-42A5-B370-EBD8DD1B3B96}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F6D66BA3-7221-49C3-9DFF-A33E450C3986}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6D66BA3-7221-49C3-9DFF-A33E450C3986}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6D66BA3-7221-49C3-9DFF-A33E450C3986}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6D66BA3-7221-49C3-9DFF-A33E450C3986}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55DE41C5-C07E-42A5-B370-EBD8DD1B3B96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55DE41C5-C07E-42A5-B370-EBD8DD1B3B96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55DE41C5-C07E-42A5-B370-EBD8DD1B3B96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55DE41C5-C07E-42A5-B370-EBD8DD1B3B96}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4CD20943-8795-4E0A-BA6C-3BE0008A5B3C}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{55DE41C5-C07E-42A5-B370-EBD8DD1B3B96} = {0A99DA6F-F594-4276-81D9-F7F9F7827D03}
+	EndGlobalSection
+EndGlobal

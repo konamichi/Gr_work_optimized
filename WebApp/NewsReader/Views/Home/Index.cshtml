@@ -1,0 +1,214 @@
+﻿@model ArticleCategoryViewModel
+@{
+    ViewData["Title"] = "Новостной источник";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Добро пожаловать</h1>
+</div>
+
+<div class="header-buttons">
+    <button style="margin-right: 16px; margin-left: 16px;" type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addArticleModal">
+        Добавить статью
+    </button>
+    <button style="margin-right: 16px; margin-left: 16px;" type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#downloadArticles">
+        Загрузить статьи
+    </button>
+</div>
+
+@if (Model.Articles != null)
+{
+    <form class="article-searching" method="get" action="@Url.Action("Search", "Home")">
+        <input class="searching-input" type="text" name="searchTerm" placeholder="Введите запрос">
+        <button style="margin-right: 16px; margin-left: 16px;" class="btn btn-primary" type="submit">Поиск</button>
+        <button style="margin-right: 16px; margin-left: 16px;" class="btn btn-secondary" type="submit" formaction="@Url.Action("Index", "Home")">Отмена</button>
+    </form>
+}
+
+<div class="articles">
+    @if (Model.Articles != null && Model.Articles.Count > 0)
+    {
+        foreach (var article in Model.Articles.OrderByDescending(a => a.PublishedAt))
+        {
+            var category = Model.Categories.First(c => c.Id == article.CategoryId);
+
+            <div class="current-article">
+                <div class="article-props" data-bs-toggle="modal" data-bs-target="@("#changeArticle" + article.Id)">
+                    <span class="article-category">@category.CategoryName</span>
+                    <span class="article-title">@article.Title</span>
+                    <span class="article-author-date">@article.PublishedAt by @article.Author</span>
+                    <span class="article-desc">@article.Description</span>
+                </div>         
+                <hr>
+                <div id="@("articleContent" + article.Id)" class="article-content">@article.Content</div>
+                @if (article.Url != null)
+                {
+                    <div id="@("continueReading" + article.Id)" class="continue-reading" onclick="continueReading('@article.Url')">Продолжить чтение</div>     
+                }   
+                <form class="article-delete" method="get" action="@Url.Action("Delete", "Home")">
+                    <input type="hidden" name="id" value="@article.Id">
+                    <button type="submit" class="btn btn-outline-danger btn-sm">Удалить</button>
+                </form>                      
+            </div>
+
+            <div class="modal fade" tabindex="-1" id="@("changeArticle" + article.Id)">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Изменить статью</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form method="get" action="@Url.Action("ChangeArticle", "Home")">
+                                <input type="hidden" name="id" value="@article.Id">
+                                <div class="form-group">
+                                    <label for="category">Категория:</label>
+                                    <select class="form-control" id="category" name="CategoryId" required>
+                                        @foreach (var existCategory in Model.Categories)
+                                        {
+                                            <option value="@existCategory.Id">@existCategory.CategoryName</option>
+                                        }
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="name">Название:</label>
+                                    <input type="text" class="form-control" id="name" name="Name" value="@article.Name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="author">Автор:</label>
+                                    <input type="text" class="form-control" id="author" name="Author" value="@article.Author" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="title">Заголовок:</label>
+                                    <input type="text" class="form-control" id="title" name="Title" value="@article.Title" required>
+                                </div>
+                                    <div class="form-group">
+                                    <label for="description">Описание:</label>
+                                    <input type="text" class="form-control" id="description" name="Description" value="@article.Description" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="publishedAt">Опубликовано:</label>
+                                    <input type="date" class="form-control" id="publishedAt" name="PublishedAt" value="@article.PublishedAt" required>
+                                </div>                      
+                                <div class="form-group">
+                                    <label for="content">Контент:</label>
+                                    <input type="text" class="form-control" id="content" name="Content" value="@article.Content" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="url">URL статьи:</label>
+                                    <input type="text" class="form-control" id="url" name="Url" value="@article.Url">
+                                </div>
+                                <div class="form-group">
+                                    <label for="urlToImage">URL картинки:</label>
+                                    <input type="text" class="form-control" id="urlToImage" name="UrlToImage" value="@article.UrlToImage">
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                                    <button type="submit" class="btn btn-primary">Изменить</button>                                  
+                                </div>                  
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <div class="no-articles">Нет статей</div>
+    }
+</div>
+
+<div class="modal fade" tabindex="-1" id="addArticleModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Добавить статью</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form method="post" action="@Url.Action("CreateArticle", "Home")">
+                    <div class="form-group">
+                        <label for="category">Категория:</label>
+                        <select class="form-control" id="category" name="CategoryName" required>
+                            @foreach (var category in Model.Categories)
+                            {
+                                <option value="@category.CategoryName">@category.CategoryName</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Название:</label>
+                        <input type="text" class="form-control" id="name" name="Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="author">Автор:</label>
+                        <input type="text" class="form-control" id="author" name="Author" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="title">Заголовок:</label>
+                        <input type="text" class="form-control" id="title" name="Title" required>
+                    </div>
+                        <div class="form-group">
+                        <label for="description">Описание:</label>
+                        <input type="text" class="form-control" id="description" name="Description" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="publishedAt">Опубликовано:</label>
+                        <input type="date" class="form-control" id="publishedAt" name="PublishedAt" required>
+                    </div>                      
+                    <div class="form-group">
+                        <label for="content">Контент:</label>
+                        <input type="text" class="form-control" id="content" name="Content" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="url">URL статьи:</label>
+                        <input type="text" class="form-control" id="url" name="Url">
+                    </div>
+                    <div class="form-group">
+                        <label for="urlToImage">URL картинки:</label>
+                        <input type="text" class="form-control" id="urlToImage" name="UrlToImage">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="submit" class="btn btn-primary">Создать</button>
+                    </div>                  
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" tabindex="-1" id="downloadArticles">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Загрузить статьи</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form method="post" action="@Url.Action("Download", "Home")">
+                    <div class="form-group">
+                        <label for="q">Ключевая фраза:</label>
+                        <input type="text" class="form-control" id="q" name="q" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Категория:</label>
+                        <select class="form-control" id="category" name="category" required>
+                            @foreach (var category in Model.Categories)
+                            {
+                                <option value="@category.CategoryName">@category.CategoryName</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="submit" class="btn btn-primary">Загрузить</button>
+                    </div>  
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/site.js" asp-append-version="true"></script>

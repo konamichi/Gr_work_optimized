@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>BenchmarkWebApp.BenchmarkService-20240427-190312</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.13.12, Windows 11 (10.0.22631.3447/23H2/2023Update/SunValley3)
+13th Gen Intel Core i7-13700F, 1 CPU, 24 logical and 16 physical cores
+.NET SDK 8.0.200
+  [Host]     : .NET 8.0.2 (8.0.224.6711), X64 RyuJIT AVX2
+  Job-SMXCYM : .NET 8.0.2 (8.0.224.6711), X64 RyuJIT AVX2
+</code></pre>
+<pre><code>InvocationCount=1  IterationCount=1  RunStrategy=Monitoring  
+UnrollFactor=1  
+</code></pre>
+
+<table>
+<thead><tr><th>Method                     </th><th>Mean</th><th>Error</th>
+</tr>
+</thead><tbody><tr><td>RunLoadArticles</td><td>1,552.6 ms</td><td>NA</td>
+</tr><tr><td>RunGetAllArticles</td><td>352.6 ms</td><td>NA</td>
+</tr><tr><td>RunGetAllCategories</td><td>340.6 ms</td><td>NA</td>
+</tr><tr><td>RunGetArticlesWithCategoriesModel</td><td>360.2 ms</td><td>NA</td>
+</tr><tr><td>RunSearch</td><td>357.5 ms</td><td>NA</td>
+</tr><tr><td>RunPublishArticle</td><td>333.8 ms</td><td>NA</td>
+</tr><tr><td>RunDeleteArticle</td><td>402.6 ms</td><td>NA</td>
+</tr><tr><td>RunEditArticle</td><td>403.8 ms</td><td>NA</td>
+</tr><tr><td>RunGetCategoryByName</td><td>370.5 ms</td><td>NA</td>
+</tr><tr><td>RunGetCategoryById</td><td>369.8 ms</td><td>NA</td>
+</tr></tbody></table>
+</body>
+</html>

@@ -1,0 +1,405 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 8 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet  restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\anton\Diplom\Benchmark\bin\Release\net8.0\4fcaf7bf-c8d8-47c8-907e-c0892448a3eb
+// command took 0.93 sec and exited with 0
+// start dotnet  build -c Release --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\anton\Diplom\Benchmark\bin\Release\net8.0\4fcaf7bf-c8d8-47c8-907e-c0892448a3eb
+// command took 1.87 sec and exited with 0
+// ***** Done, took 00:00:02 (2.85 sec)   *****
+// Found 8 benchmarks:
+//   BenchmarkService.RunLoadArticles: Job-LVARME(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+//   BenchmarkService.RunGetArticles: Job-LVARME(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+//   BenchmarkService.RunSearch: Job-LVARME(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+//   BenchmarkService.RunPublishArticle: Job-LVARME(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+//   BenchmarkService.RunDeleteArticle: Job-LVARME(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+//   BenchmarkService.RunEditArticle: Job-LVARME(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+//   BenchmarkService.RunGetCategoryByName: Job-LVARME(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+//   BenchmarkService.RunGetCategoryById: Job-LVARME(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: Высокая производительность)
+// **************************
+// Benchmark: BenchmarkService.RunLoadArticles: Job-LVARME(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet 4fcaf7bf-c8d8-47c8-907e-c0892448a3eb.dll --anonymousPipes 2328 2324 --benchmarkName BenchmarkWebApp.BenchmarkService.RunLoadArticles --job "InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1" --benchmarkId 0 in C:\Users\anton\Diplom\Benchmark\bin\Release\net8.0\4fcaf7bf-c8d8-47c8-907e-c0892448a3eb\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 8.0.2 (8.0.224.6711), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni,SERIALIZE VectorSize=256
+// Job: Job-QMZLUE(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 1677445800.00 ns, 1.6774 s/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 1677445800.00 ns, 1.6774 s/op
+
+// AfterAll
+// Benchmark Process 8224 has exited with code 0.
+
+Mean = 1.677 s, StdErr = 0.000 s (0.00%), N = 1, StdDev = 0.000 s
+Min = 1.677 s, Q1 = 1.677 s, Median = 1.677 s, Q3 = 1.677 s, Max = 1.677 s
+IQR = 0.000 s, LowerFence = 1.677 s, UpperFence = 1.677 s
+ConfidenceInterval = [NaN s; NaN s] (CI 99.9%), Margin = NaN s (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 7 (87,5 %) benchmark(s) to run. Estimated finish 2024-04-27 18:57 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: Высокая производительность)
+// **************************
+// Benchmark: BenchmarkService.RunGetArticles: Job-LVARME(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet 4fcaf7bf-c8d8-47c8-907e-c0892448a3eb.dll --anonymousPipes 2180 2176 --benchmarkName BenchmarkWebApp.BenchmarkService.RunGetArticles --job "InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1" --benchmarkId 1 in C:\Users\anton\Diplom\Benchmark\bin\Release\net8.0\4fcaf7bf-c8d8-47c8-907e-c0892448a3eb\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 8.0.2 (8.0.224.6711), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni,SERIALIZE VectorSize=256
+// Job: Job-ZWRYZH(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 358622700.00 ns, 358.6227 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 358622700.00 ns, 358.6227 ms/op
+
+// AfterAll
+// Benchmark Process 10300 has exited with code 0.
+
+Mean = 358.623 ms, StdErr = 0.000 ms (0.00%), N = 1, StdDev = 0.000 ms
+Min = 358.623 ms, Q1 = 358.623 ms, Median = 358.623 ms, Q3 = 358.623 ms, Max = 358.623 ms
+IQR = 0.000 ms, LowerFence = 358.623 ms, UpperFence = 358.623 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 6 (75,0 %) benchmark(s) to run. Estimated finish 2024-04-27 18:57 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: Высокая производительность)
+// **************************
+// Benchmark: BenchmarkService.RunSearch: Job-LVARME(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet 4fcaf7bf-c8d8-47c8-907e-c0892448a3eb.dll --anonymousPipes 2328 2324 --benchmarkName BenchmarkWebApp.BenchmarkService.RunSearch --job "InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1" --benchmarkId 2 in C:\Users\anton\Diplom\Benchmark\bin\Release\net8.0\4fcaf7bf-c8d8-47c8-907e-c0892448a3eb\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 8.0.2 (8.0.224.6711), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni,SERIALIZE VectorSize=256
+// Job: Job-ZOAPYA(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 362260500.00 ns, 362.2605 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 362260500.00 ns, 362.2605 ms/op
+
+// AfterAll
+// Benchmark Process 22540 has exited with code 0.
+
+Mean = 362.260 ms, StdErr = 0.000 ms (0.00%), N = 1, StdDev = 0.000 ms
+Min = 362.260 ms, Q1 = 362.260 ms, Median = 362.260 ms, Q3 = 362.260 ms, Max = 362.260 ms
+IQR = 0.000 ms, LowerFence = 362.260 ms, UpperFence = 362.260 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 5 (62,5 %) benchmark(s) to run. Estimated finish 2024-04-27 18:57 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: Высокая производительность)
+// **************************
+// Benchmark: BenchmarkService.RunPublishArticle: Job-LVARME(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet 4fcaf7bf-c8d8-47c8-907e-c0892448a3eb.dll --anonymousPipes 1708 1776 --benchmarkName BenchmarkWebApp.BenchmarkService.RunPublishArticle --job "InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1" --benchmarkId 3 in C:\Users\anton\Diplom\Benchmark\bin\Release\net8.0\4fcaf7bf-c8d8-47c8-907e-c0892448a3eb\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 8.0.2 (8.0.224.6711), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni,SERIALIZE VectorSize=256
+// Job: Job-NUCAIQ(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 337553000.00 ns, 337.5530 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 337553000.00 ns, 337.5530 ms/op
+
+// AfterAll
+// Benchmark Process 22976 has exited with code 0.
+
+Mean = 337.553 ms, StdErr = 0.000 ms (0.00%), N = 1, StdDev = 0.000 ms
+Min = 337.553 ms, Q1 = 337.553 ms, Median = 337.553 ms, Q3 = 337.553 ms, Max = 337.553 ms
+IQR = 0.000 ms, LowerFence = 337.553 ms, UpperFence = 337.553 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 4 (50,0 %) benchmark(s) to run. Estimated finish 2024-04-27 18:57 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: Высокая производительность)
+// **************************
+// Benchmark: BenchmarkService.RunDeleteArticle: Job-LVARME(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet 4fcaf7bf-c8d8-47c8-907e-c0892448a3eb.dll --anonymousPipes 1728 1316 --benchmarkName BenchmarkWebApp.BenchmarkService.RunDeleteArticle --job "InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1" --benchmarkId 4 in C:\Users\anton\Diplom\Benchmark\bin\Release\net8.0\4fcaf7bf-c8d8-47c8-907e-c0892448a3eb\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 8.0.2 (8.0.224.6711), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni,SERIALIZE VectorSize=256
+// Job: Job-KUCFDK(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 405294300.00 ns, 405.2943 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 405294300.00 ns, 405.2943 ms/op
+
+// AfterAll
+// Benchmark Process 22344 has exited with code 0.
+
+Mean = 405.294 ms, StdErr = 0.000 ms (0.00%), N = 1, StdDev = 0.000 ms
+Min = 405.294 ms, Q1 = 405.294 ms, Median = 405.294 ms, Q3 = 405.294 ms, Max = 405.294 ms
+IQR = 0.000 ms, LowerFence = 405.294 ms, UpperFence = 405.294 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 3 (37,5 %) benchmark(s) to run. Estimated finish 2024-04-27 18:57 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: Высокая производительность)
+// **************************
+// Benchmark: BenchmarkService.RunEditArticle: Job-LVARME(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet 4fcaf7bf-c8d8-47c8-907e-c0892448a3eb.dll --anonymousPipes 1728 1316 --benchmarkName BenchmarkWebApp.BenchmarkService.RunEditArticle --job "InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1" --benchmarkId 5 in C:\Users\anton\Diplom\Benchmark\bin\Release\net8.0\4fcaf7bf-c8d8-47c8-907e-c0892448a3eb\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 8.0.2 (8.0.224.6711), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni,SERIALIZE VectorSize=256
+// Job: Job-JEMXKR(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 401864800.00 ns, 401.8648 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 401864800.00 ns, 401.8648 ms/op
+
+// AfterAll
+// Benchmark Process 9024 has exited with code 0.
+
+Mean = 401.865 ms, StdErr = 0.000 ms (0.00%), N = 1, StdDev = 0.000 ms
+Min = 401.865 ms, Q1 = 401.865 ms, Median = 401.865 ms, Q3 = 401.865 ms, Max = 401.865 ms
+IQR = 0.000 ms, LowerFence = 401.865 ms, UpperFence = 401.865 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 2 (25,0 %) benchmark(s) to run. Estimated finish 2024-04-27 18:57 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: Высокая производительность)
+// **************************
+// Benchmark: BenchmarkService.RunGetCategoryByName: Job-LVARME(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet 4fcaf7bf-c8d8-47c8-907e-c0892448a3eb.dll --anonymousPipes 1348 1336 --benchmarkName BenchmarkWebApp.BenchmarkService.RunGetCategoryByName --job "InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1" --benchmarkId 6 in C:\Users\anton\Diplom\Benchmark\bin\Release\net8.0\4fcaf7bf-c8d8-47c8-907e-c0892448a3eb\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 8.0.2 (8.0.224.6711), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni,SERIALIZE VectorSize=256
+// Job: Job-IPDQKZ(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 376494400.00 ns, 376.4944 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 376494400.00 ns, 376.4944 ms/op
+
+// AfterAll
+// Benchmark Process 6224 has exited with code 0.
+
+Mean = 376.494 ms, StdErr = 0.000 ms (0.00%), N = 1, StdDev = 0.000 ms
+Min = 376.494 ms, Q1 = 376.494 ms, Median = 376.494 ms, Q3 = 376.494 ms, Max = 376.494 ms
+IQR = 0.000 ms, LowerFence = 376.494 ms, UpperFence = 376.494 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 1 (12,5 %) benchmark(s) to run. Estimated finish 2024-04-27 18:57 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: Высокая производительность)
+// **************************
+// Benchmark: BenchmarkService.RunGetCategoryById: Job-LVARME(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet 4fcaf7bf-c8d8-47c8-907e-c0892448a3eb.dll --anonymousPipes 2220 1344 --benchmarkName BenchmarkWebApp.BenchmarkService.RunGetCategoryById --job "InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1" --benchmarkId 7 in C:\Users\anton\Diplom\Benchmark\bin\Release\net8.0\4fcaf7bf-c8d8-47c8-907e-c0892448a3eb\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 8.0.2 (8.0.224.6711), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni,SERIALIZE VectorSize=256
+// Job: Job-JWDYFD(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 377313800.00 ns, 377.3138 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 377313800.00 ns, 377.3138 ms/op
+
+// AfterAll
+// Benchmark Process 22064 has exited with code 0.
+
+Mean = 377.314 ms, StdErr = 0.000 ms (0.00%), N = 1, StdDev = 0.000 ms
+Min = 377.314 ms, Q1 = 377.314 ms, Median = 377.314 ms, Q3 = 377.314 ms, Max = 377.314 ms
+IQR = 0.000 ms, LowerFence = 377.314 ms, UpperFence = 377.314 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 0 (0,0 %) benchmark(s) to run. Estimated finish 2024-04-27 18:57 (0h 0m from now) **
+Successfully reverted power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: Высокая производительность)
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts\results\BenchmarkWebApp.BenchmarkService-report.csv
+  BenchmarkDotNet.Artifacts\results\BenchmarkWebApp.BenchmarkService-report-github.md
+  BenchmarkDotNet.Artifacts\results\BenchmarkWebApp.BenchmarkService-report.html
+
+// * Detailed results *
+BenchmarkService.RunLoadArticles: Job-LVARME(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+Runtime = .NET 8.0.2 (8.0.224.6711), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 1.677 s, StdErr = 0.000 s (0.00%), N = 1, StdDev = 0.000 s
+Min = 1.677 s, Q1 = 1.677 s, Median = 1.677 s, Q3 = 1.677 s, Max = 1.677 s
+IQR = 0.000 s, LowerFence = 1.677 s, UpperFence = 1.677 s
+ConfidenceInterval = [NaN s; NaN s] (CI 99.9%), Margin = NaN s (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[1.677 s ; 1.677 s) | @
+---------------------------------------------------
+
+BenchmarkService.RunGetArticles: Job-LVARME(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+Runtime = .NET 8.0.2 (8.0.224.6711), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 358.623 ms, StdErr = 0.000 ms (0.00%), N = 1, StdDev = 0.000 ms
+Min = 358.623 ms, Q1 = 358.623 ms, Median = 358.623 ms, Q3 = 358.623 ms, Max = 358.623 ms
+IQR = 0.000 ms, LowerFence = 358.623 ms, UpperFence = 358.623 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[358.623 ms ; 358.623 ms) | @
+---------------------------------------------------
+
+BenchmarkService.RunSearch: Job-LVARME(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+Runtime = .NET 8.0.2 (8.0.224.6711), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 362.260 ms, StdErr = 0.000 ms (0.00%), N = 1, StdDev = 0.000 ms
+Min = 362.260 ms, Q1 = 362.260 ms, Median = 362.260 ms, Q3 = 362.260 ms, Max = 362.260 ms
+IQR = 0.000 ms, LowerFence = 362.260 ms, UpperFence = 362.260 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[362.260 ms ; 362.261 ms) | @
+---------------------------------------------------
+
+BenchmarkService.RunPublishArticle: Job-LVARME(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+Runtime = .NET 8.0.2 (8.0.224.6711), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 337.553 ms, StdErr = 0.000 ms (0.00%), N = 1, StdDev = 0.000 ms
+Min = 337.553 ms, Q1 = 337.553 ms, Median = 337.553 ms, Q3 = 337.553 ms, Max = 337.553 ms
+IQR = 0.000 ms, LowerFence = 337.553 ms, UpperFence = 337.553 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[337.553 ms ; 337.553 ms) | @
+---------------------------------------------------
+
+BenchmarkService.RunDeleteArticle: Job-LVARME(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+Runtime = .NET 8.0.2 (8.0.224.6711), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 405.294 ms, StdErr = 0.000 ms (0.00%), N = 1, StdDev = 0.000 ms
+Min = 405.294 ms, Q1 = 405.294 ms, Median = 405.294 ms, Q3 = 405.294 ms, Max = 405.294 ms
+IQR = 0.000 ms, LowerFence = 405.294 ms, UpperFence = 405.294 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[405.294 ms ; 405.294 ms) | @
+---------------------------------------------------
+
+BenchmarkService.RunEditArticle: Job-LVARME(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+Runtime = .NET 8.0.2 (8.0.224.6711), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 401.865 ms, StdErr = 0.000 ms (0.00%), N = 1, StdDev = 0.000 ms
+Min = 401.865 ms, Q1 = 401.865 ms, Median = 401.865 ms, Q3 = 401.865 ms, Max = 401.865 ms
+IQR = 0.000 ms, LowerFence = 401.865 ms, UpperFence = 401.865 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[401.865 ms ; 401.865 ms) | @
+---------------------------------------------------
+
+BenchmarkService.RunGetCategoryByName: Job-LVARME(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+Runtime = .NET 8.0.2 (8.0.224.6711), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 376.494 ms, StdErr = 0.000 ms (0.00%), N = 1, StdDev = 0.000 ms
+Min = 376.494 ms, Q1 = 376.494 ms, Median = 376.494 ms, Q3 = 376.494 ms, Max = 376.494 ms
+IQR = 0.000 ms, LowerFence = 376.494 ms, UpperFence = 376.494 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[376.494 ms ; 376.494 ms) | @
+---------------------------------------------------
+
+BenchmarkService.RunGetCategoryById: Job-LVARME(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+Runtime = .NET 8.0.2 (8.0.224.6711), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 377.314 ms, StdErr = 0.000 ms (0.00%), N = 1, StdDev = 0.000 ms
+Min = 377.314 ms, Q1 = 377.314 ms, Median = 377.314 ms, Q3 = 377.314 ms, Max = 377.314 ms
+IQR = 0.000 ms, LowerFence = 377.314 ms, UpperFence = 377.314 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[377.314 ms ; 377.314 ms) | @
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet v0.13.12, Windows 11 (10.0.22631.3447/23H2/2023Update/SunValley3)
+13th Gen Intel Core i7-13700F, 1 CPU, 24 logical and 16 physical cores
+.NET SDK 8.0.200
+  [Host]     : .NET 8.0.2 (8.0.224.6711), X64 RyuJIT AVX2
+  Job-LVARME : .NET 8.0.2 (8.0.224.6711), X64 RyuJIT AVX2
+
+InvocationCount=1  IterationCount=1  RunStrategy=Monitoring  
+UnrollFactor=1  
+
+| Method               | Mean       | Error |
+|--------------------- |-----------:|------:|
+| RunLoadArticles      | 1,677.4 ms |    NA |
+| RunGetArticles       |   358.6 ms |    NA |
+| RunSearch            |   362.3 ms |    NA |
+| RunPublishArticle    |   337.6 ms |    NA |
+| RunDeleteArticle     |   405.3 ms |    NA |
+| RunEditArticle       |   401.9 ms |    NA |
+| RunGetCategoryByName |   376.5 ms |    NA |
+| RunGetCategoryById   |   377.3 ms |    NA |
+
+// * Legends *
+  Mean  : Arithmetic mean of all measurements
+  Error : Half of 99.9% confidence interval
+  1 ms  : 1 Millisecond (0.001 sec)
+
+// ***** BenchmarkRunner: End *****
+Run time: 00:00:05 (5.66 sec), executed benchmarks: 8
+
+Global total time: 00:00:08 (8.65 sec), executed benchmarks: 8
+// * Artifacts cleanup *
+Artifacts cleanup is finished
