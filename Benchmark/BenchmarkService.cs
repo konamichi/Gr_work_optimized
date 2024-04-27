@@ -28,7 +28,7 @@ namespace BenchmarkWebApp
         }
 
         [Benchmark]
-        public async Task RunLoadArticles()
+        public void RunLoadArticles()
         {
             var news = new NewsApiModel
             {
@@ -56,59 +56,57 @@ namespace BenchmarkWebApp
                 });
             }
             
-            await _service.LoadArticlesAsync(news, "business");
+            _service.LoadArticlesAsync(news, "business").Wait();
         }
 
         [Benchmark]
-        public async Task RunGetAllArticles() => await _repository.GetAllArticlesAsync();
+        public void RunGetAllArticles() => _repository.GetAllArticlesAsync().Wait();
         
         [Benchmark]
-        public async Task RunGetAllCategories() => await _repository.GetAllCategories();
+        public void RunGetAllCategories() => _repository.GetAllCategories().Wait();
         
         [Benchmark]
-        public async Task RunGetArticlesWithCategoriesModel() => await _service.GetArticlesWithCategoriesModelAsync();
+        public void RunGetArticlesWithCategoriesModel() => _service.GetArticlesWithCategoriesModelAsync().Wait();
         
         [Benchmark]
-        public async Task RunSearch() => await _service.SearchAsync("тест");
+        public void RunSearch() => _service.SearchAsync("тест").Wait();
         
         [Benchmark]
-        public async Task RunPublishArticle() => 
-            await _service.PublishArticleAsync(new PublishArticleModel
-            {
-                CategoryId = 1,
-                Name = "тест",
-                Author = "тест",
-                Title = "тест",
-                Description = "тест",
-                PublishedAt = DateTime.Now,
-                Content = "тест",
-                Url = "тест",
-                UrlToImage = "тест"
-            });
+        public void RunPublishArticle() => _service.PublishArticleAsync(new PublishArticleModel
+        {
+            CategoryId = 1,
+            Name = "тест",
+            Author = "тест",
+            Title = "тест",
+            Description = "тест",
+            PublishedAt = DateTime.Now,
+            Content = "тест",
+            Url = "тест",
+            UrlToImage = "тест"
+        }).Wait();
 
         [Benchmark]
-        public async Task RunDeleteArticle() => await _service.DeleteArticleAsync(158134);
+        public void RunDeleteArticle() => _service.DeleteArticleAsync(923138).Wait();
 
         [Benchmark]
-        public async void RunEditArticle() => 
-            await _service.EditArticleAsync(new EditArticleModel
-            {
-                Id = 157133,
-                CategoryId = 1,
-                Name = "тест",
-                Author = "тест",
-                Title = "тест",
-                Description = "тест",
-                PublishedAt = DateTime.Now,
-                Content = "тест",
-                Url = "тест",
-                UrlToImage = "тест"
-            });
+        public void RunEditArticle() => _service.EditArticleAsync(new EditArticleModel
+        {
+            Id = 157133,
+            CategoryId = 1,
+            Name = "тест",
+            Author = "тест",
+            Title = "тест",
+            Description = "тест",
+            PublishedAt = DateTime.Now,
+            Content = "тест",
+            Url = "тест",
+            UrlToImage = "тест"
+        }).Wait();
 
         [Benchmark]
-        public async Task RunGetCategoryByName() => await _service.GetCategoryAsync("business");
+        public void RunGetCategoryByName() => _service.GetCategoryAsync("business").Wait();
         
         [Benchmark]
-        public async Task RunGetCategoryById() => await _service.GetCategoryAsync(1);
+        public void RunGetCategoryById() => _service.GetCategoryAsync(1).Wait();
     }
 }

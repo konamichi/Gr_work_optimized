@@ -1,0 +1,495 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 10 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet  restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\anton\Diplom_optimized\Benchmark\bin\Release\net8.0\252dffd0-0d43-446c-a243-20de7ddf60b4
+// command took 0.64 sec and exited with 0
+// start dotnet  build -c Release --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\anton\Diplom_optimized\Benchmark\bin\Release\net8.0\252dffd0-0d43-446c-a243-20de7ddf60b4
+// command took 1.69 sec and exited with 0
+// ***** Done, took 00:00:02 (2.37 sec)   *****
+// Found 10 benchmarks:
+//   BenchmarkService.RunLoadArticles: Job-MIHALS(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+//   BenchmarkService.RunGetAllArticles: Job-MIHALS(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+//   BenchmarkService.RunGetAllCategories: Job-MIHALS(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+//   BenchmarkService.RunGetArticlesWithCategoriesModel: Job-MIHALS(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+//   BenchmarkService.RunSearch: Job-MIHALS(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+//   BenchmarkService.RunPublishArticle: Job-MIHALS(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+//   BenchmarkService.RunDeleteArticle: Job-MIHALS(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+//   BenchmarkService.RunEditArticle: Job-MIHALS(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+//   BenchmarkService.RunGetCategoryByName: Job-MIHALS(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+//   BenchmarkService.RunGetCategoryById: Job-MIHALS(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: Высокая производительность)
+// **************************
+// Benchmark: BenchmarkService.RunLoadArticles: Job-MIHALS(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet 252dffd0-0d43-446c-a243-20de7ddf60b4.dll --anonymousPipes 1660 1648 --benchmarkName BenchmarkWebApp.BenchmarkService.RunLoadArticles --job "InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1" --benchmarkId 0 in C:\Users\anton\Diplom_optimized\Benchmark\bin\Release\net8.0\252dffd0-0d43-446c-a243-20de7ddf60b4\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 8.0.2 (8.0.224.6711), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni,SERIALIZE VectorSize=256
+// Job: Job-CZCERJ(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 520204100.00 ns, 520.2041 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 520204100.00 ns, 520.2041 ms/op
+
+// AfterAll
+// Benchmark Process 23360 has exited with code 0.
+
+Mean = 520.204 ms, StdErr = 0.000 ms (0.00%), N = 1, StdDev = 0.000 ms
+Min = 520.204 ms, Q1 = 520.204 ms, Median = 520.204 ms, Q3 = 520.204 ms, Max = 520.204 ms
+IQR = 0.000 ms, LowerFence = 520.204 ms, UpperFence = 520.204 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 9 (90,0 %) benchmark(s) to run. Estimated finish 2024-04-28 0:26 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: Высокая производительность)
+// **************************
+// Benchmark: BenchmarkService.RunGetAllArticles: Job-MIHALS(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet 252dffd0-0d43-446c-a243-20de7ddf60b4.dll --anonymousPipes 1680 1676 --benchmarkName BenchmarkWebApp.BenchmarkService.RunGetAllArticles --job "InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1" --benchmarkId 1 in C:\Users\anton\Diplom_optimized\Benchmark\bin\Release\net8.0\252dffd0-0d43-446c-a243-20de7ddf60b4\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 8.0.2 (8.0.224.6711), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni,SERIALIZE VectorSize=256
+// Job: Job-EIPZAS(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 1537751800.00 ns, 1.5378 s/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 1537751800.00 ns, 1.5378 s/op
+
+// AfterAll
+// Benchmark Process 19516 has exited with code 0.
+
+Mean = 1.538 s, StdErr = 0.000 s (0.00%), N = 1, StdDev = 0.000 s
+Min = 1.538 s, Q1 = 1.538 s, Median = 1.538 s, Q3 = 1.538 s, Max = 1.538 s
+IQR = 0.000 s, LowerFence = 1.538 s, UpperFence = 1.538 s
+ConfidenceInterval = [NaN s; NaN s] (CI 99.9%), Margin = NaN s (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 8 (80,0 %) benchmark(s) to run. Estimated finish 2024-04-28 0:26 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: Высокая производительность)
+// **************************
+// Benchmark: BenchmarkService.RunGetAllCategories: Job-MIHALS(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet 252dffd0-0d43-446c-a243-20de7ddf60b4.dll --anonymousPipes 1592 1836 --benchmarkName BenchmarkWebApp.BenchmarkService.RunGetAllCategories --job "InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1" --benchmarkId 2 in C:\Users\anton\Diplom_optimized\Benchmark\bin\Release\net8.0\252dffd0-0d43-446c-a243-20de7ddf60b4\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 8.0.2 (8.0.224.6711), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni,SERIALIZE VectorSize=256
+// Job: Job-BUHTKH(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 344983900.00 ns, 344.9839 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 344983900.00 ns, 344.9839 ms/op
+
+// AfterAll
+// Benchmark Process 22228 has exited with code 0.
+
+Mean = 344.984 ms, StdErr = 0.000 ms (0.00%), N = 1, StdDev = 0.000 ms
+Min = 344.984 ms, Q1 = 344.984 ms, Median = 344.984 ms, Q3 = 344.984 ms, Max = 344.984 ms
+IQR = 0.000 ms, LowerFence = 344.984 ms, UpperFence = 344.984 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 7 (70,0 %) benchmark(s) to run. Estimated finish 2024-04-28 0:26 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: Высокая производительность)
+// **************************
+// Benchmark: BenchmarkService.RunGetArticlesWithCategoriesModel: Job-MIHALS(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet 252dffd0-0d43-446c-a243-20de7ddf60b4.dll --anonymousPipes 1824 1712 --benchmarkName BenchmarkWebApp.BenchmarkService.RunGetArticlesWithCategoriesModel --job "InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1" --benchmarkId 3 in C:\Users\anton\Diplom_optimized\Benchmark\bin\Release\net8.0\252dffd0-0d43-446c-a243-20de7ddf60b4\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 8.0.2 (8.0.224.6711), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni,SERIALIZE VectorSize=256
+// Job: Job-GIGRRU(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 1643938400.00 ns, 1.6439 s/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 1643938400.00 ns, 1.6439 s/op
+
+// AfterAll
+// Benchmark Process 21512 has exited with code 0.
+
+Mean = 1.644 s, StdErr = 0.000 s (0.00%), N = 1, StdDev = 0.000 s
+Min = 1.644 s, Q1 = 1.644 s, Median = 1.644 s, Q3 = 1.644 s, Max = 1.644 s
+IQR = 0.000 s, LowerFence = 1.644 s, UpperFence = 1.644 s
+ConfidenceInterval = [NaN s; NaN s] (CI 99.9%), Margin = NaN s (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 6 (60,0 %) benchmark(s) to run. Estimated finish 2024-04-28 0:26 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: Высокая производительность)
+// **************************
+// Benchmark: BenchmarkService.RunSearch: Job-MIHALS(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet 252dffd0-0d43-446c-a243-20de7ddf60b4.dll --anonymousPipes 1692 1808 --benchmarkName BenchmarkWebApp.BenchmarkService.RunSearch --job "InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1" --benchmarkId 4 in C:\Users\anton\Diplom_optimized\Benchmark\bin\Release\net8.0\252dffd0-0d43-446c-a243-20de7ddf60b4\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 8.0.2 (8.0.224.6711), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni,SERIALIZE VectorSize=256
+// Job: Job-PQOGDW(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 2083610900.00 ns, 2.0836 s/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 2083610900.00 ns, 2.0836 s/op
+
+// AfterAll
+// Benchmark Process 19236 has exited with code 0.
+
+Mean = 2.084 s, StdErr = 0.000 s (0.00%), N = 1, StdDev = 0.000 s
+Min = 2.084 s, Q1 = 2.084 s, Median = 2.084 s, Q3 = 2.084 s, Max = 2.084 s
+IQR = 0.000 s, LowerFence = 2.084 s, UpperFence = 2.084 s
+ConfidenceInterval = [NaN s; NaN s] (CI 99.9%), Margin = NaN s (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 5 (50,0 %) benchmark(s) to run. Estimated finish 2024-04-28 0:26 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: Высокая производительность)
+// **************************
+// Benchmark: BenchmarkService.RunPublishArticle: Job-MIHALS(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet 252dffd0-0d43-446c-a243-20de7ddf60b4.dll --anonymousPipes 1824 1584 --benchmarkName BenchmarkWebApp.BenchmarkService.RunPublishArticle --job "InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1" --benchmarkId 5 in C:\Users\anton\Diplom_optimized\Benchmark\bin\Release\net8.0\252dffd0-0d43-446c-a243-20de7ddf60b4\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 8.0.2 (8.0.224.6711), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni,SERIALIZE VectorSize=256
+// Job: Job-OEWXOT(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 353456400.00 ns, 353.4564 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 353456400.00 ns, 353.4564 ms/op
+
+// AfterAll
+// Benchmark Process 23716 has exited with code 0.
+
+Mean = 353.456 ms, StdErr = 0.000 ms (0.00%), N = 1, StdDev = 0.000 ms
+Min = 353.456 ms, Q1 = 353.456 ms, Median = 353.456 ms, Q3 = 353.456 ms, Max = 353.456 ms
+IQR = 0.000 ms, LowerFence = 353.456 ms, UpperFence = 353.456 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 4 (40,0 %) benchmark(s) to run. Estimated finish 2024-04-28 0:26 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: Высокая производительность)
+// **************************
+// Benchmark: BenchmarkService.RunDeleteArticle: Job-MIHALS(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet 252dffd0-0d43-446c-a243-20de7ddf60b4.dll --anonymousPipes 1608 1784 --benchmarkName BenchmarkWebApp.BenchmarkService.RunDeleteArticle --job "InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1" --benchmarkId 6 in C:\Users\anton\Diplom_optimized\Benchmark\bin\Release\net8.0\252dffd0-0d43-446c-a243-20de7ddf60b4\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 8.0.2 (8.0.224.6711), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni,SERIALIZE VectorSize=256
+// Job: Job-JDCZDK(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 420269600.00 ns, 420.2696 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 420269600.00 ns, 420.2696 ms/op
+
+// AfterAll
+// Benchmark Process 18108 has exited with code 0.
+
+Mean = 420.270 ms, StdErr = 0.000 ms (0.00%), N = 1, StdDev = 0.000 ms
+Min = 420.270 ms, Q1 = 420.270 ms, Median = 420.270 ms, Q3 = 420.270 ms, Max = 420.270 ms
+IQR = 0.000 ms, LowerFence = 420.270 ms, UpperFence = 420.270 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 3 (30,0 %) benchmark(s) to run. Estimated finish 2024-04-28 0:26 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: Высокая производительность)
+// **************************
+// Benchmark: BenchmarkService.RunEditArticle: Job-MIHALS(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet 252dffd0-0d43-446c-a243-20de7ddf60b4.dll --anonymousPipes 1564 1568 --benchmarkName BenchmarkWebApp.BenchmarkService.RunEditArticle --job "InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1" --benchmarkId 7 in C:\Users\anton\Diplom_optimized\Benchmark\bin\Release\net8.0\252dffd0-0d43-446c-a243-20de7ddf60b4\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 8.0.2 (8.0.224.6711), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni,SERIALIZE VectorSize=256
+// Job: Job-LLTICN(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 419582200.00 ns, 419.5822 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 419582200.00 ns, 419.5822 ms/op
+
+// AfterAll
+// Benchmark Process 25576 has exited with code 0.
+
+Mean = 419.582 ms, StdErr = 0.000 ms (0.00%), N = 1, StdDev = 0.000 ms
+Min = 419.582 ms, Q1 = 419.582 ms, Median = 419.582 ms, Q3 = 419.582 ms, Max = 419.582 ms
+IQR = 0.000 ms, LowerFence = 419.582 ms, UpperFence = 419.582 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 2 (20,0 %) benchmark(s) to run. Estimated finish 2024-04-28 0:26 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: Высокая производительность)
+// **************************
+// Benchmark: BenchmarkService.RunGetCategoryByName: Job-MIHALS(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet 252dffd0-0d43-446c-a243-20de7ddf60b4.dll --anonymousPipes 1780 1788 --benchmarkName BenchmarkWebApp.BenchmarkService.RunGetCategoryByName --job "InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1" --benchmarkId 8 in C:\Users\anton\Diplom_optimized\Benchmark\bin\Release\net8.0\252dffd0-0d43-446c-a243-20de7ddf60b4\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 8.0.2 (8.0.224.6711), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni,SERIALIZE VectorSize=256
+// Job: Job-EYLPWF(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 386314600.00 ns, 386.3146 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 386314600.00 ns, 386.3146 ms/op
+
+// AfterAll
+// Benchmark Process 19516 has exited with code 0.
+
+Mean = 386.315 ms, StdErr = 0.000 ms (0.00%), N = 1, StdDev = 0.000 ms
+Min = 386.315 ms, Q1 = 386.315 ms, Median = 386.315 ms, Q3 = 386.315 ms, Max = 386.315 ms
+IQR = 0.000 ms, LowerFence = 386.315 ms, UpperFence = 386.315 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 1 (10,0 %) benchmark(s) to run. Estimated finish 2024-04-28 0:26 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: Высокая производительность)
+// **************************
+// Benchmark: BenchmarkService.RunGetCategoryById: Job-MIHALS(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet 252dffd0-0d43-446c-a243-20de7ddf60b4.dll --anonymousPipes 1600 1536 --benchmarkName BenchmarkWebApp.BenchmarkService.RunGetCategoryById --job "InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1" --benchmarkId 9 in C:\Users\anton\Diplom_optimized\Benchmark\bin\Release\net8.0\252dffd0-0d43-446c-a243-20de7ddf60b4\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.13.12
+// Runtime=.NET 8.0.2 (8.0.224.6711), X64 RyuJIT AVX2
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni,SERIALIZE VectorSize=256
+// Job: Job-JCSNYS(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 383536600.00 ns, 383.5366 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 383536600.00 ns, 383.5366 ms/op
+
+// AfterAll
+// Benchmark Process 22416 has exited with code 0.
+
+Mean = 383.537 ms, StdErr = 0.000 ms (0.00%), N = 1, StdDev = 0.000 ms
+Min = 383.537 ms, Q1 = 383.537 ms, Median = 383.537 ms, Q3 = 383.537 ms, Max = 383.537 ms
+IQR = 0.000 ms, LowerFence = 383.537 ms, UpperFence = 383.537 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+
+// ** Remained 0 (0,0 %) benchmark(s) to run. Estimated finish 2024-04-28 0:26 (0h 0m from now) **
+Successfully reverted power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: Высокая производительность)
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts\results\BenchmarkWebApp.BenchmarkService-report.csv
+  BenchmarkDotNet.Artifacts\results\BenchmarkWebApp.BenchmarkService-report-github.md
+  BenchmarkDotNet.Artifacts\results\BenchmarkWebApp.BenchmarkService-report.html
+
+// * Detailed results *
+BenchmarkService.RunLoadArticles: Job-MIHALS(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+Runtime = .NET 8.0.2 (8.0.224.6711), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 520.204 ms, StdErr = 0.000 ms (0.00%), N = 1, StdDev = 0.000 ms
+Min = 520.204 ms, Q1 = 520.204 ms, Median = 520.204 ms, Q3 = 520.204 ms, Max = 520.204 ms
+IQR = 0.000 ms, LowerFence = 520.204 ms, UpperFence = 520.204 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[520.204 ms ; 520.204 ms) | @
+---------------------------------------------------
+
+BenchmarkService.RunGetAllArticles: Job-MIHALS(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+Runtime = .NET 8.0.2 (8.0.224.6711), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 1.538 s, StdErr = 0.000 s (0.00%), N = 1, StdDev = 0.000 s
+Min = 1.538 s, Q1 = 1.538 s, Median = 1.538 s, Q3 = 1.538 s, Max = 1.538 s
+IQR = 0.000 s, LowerFence = 1.538 s, UpperFence = 1.538 s
+ConfidenceInterval = [NaN s; NaN s] (CI 99.9%), Margin = NaN s (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[1.538 s ; 1.538 s) | @
+---------------------------------------------------
+
+BenchmarkService.RunGetAllCategories: Job-MIHALS(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+Runtime = .NET 8.0.2 (8.0.224.6711), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 344.984 ms, StdErr = 0.000 ms (0.00%), N = 1, StdDev = 0.000 ms
+Min = 344.984 ms, Q1 = 344.984 ms, Median = 344.984 ms, Q3 = 344.984 ms, Max = 344.984 ms
+IQR = 0.000 ms, LowerFence = 344.984 ms, UpperFence = 344.984 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[344.984 ms ; 344.984 ms) | @
+---------------------------------------------------
+
+BenchmarkService.RunGetArticlesWithCategoriesModel: Job-MIHALS(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+Runtime = .NET 8.0.2 (8.0.224.6711), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 1.644 s, StdErr = 0.000 s (0.00%), N = 1, StdDev = 0.000 s
+Min = 1.644 s, Q1 = 1.644 s, Median = 1.644 s, Q3 = 1.644 s, Max = 1.644 s
+IQR = 0.000 s, LowerFence = 1.644 s, UpperFence = 1.644 s
+ConfidenceInterval = [NaN s; NaN s] (CI 99.9%), Margin = NaN s (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[1.644 s ; 1.644 s) | @
+---------------------------------------------------
+
+BenchmarkService.RunSearch: Job-MIHALS(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+Runtime = .NET 8.0.2 (8.0.224.6711), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 2.084 s, StdErr = 0.000 s (0.00%), N = 1, StdDev = 0.000 s
+Min = 2.084 s, Q1 = 2.084 s, Median = 2.084 s, Q3 = 2.084 s, Max = 2.084 s
+IQR = 0.000 s, LowerFence = 2.084 s, UpperFence = 2.084 s
+ConfidenceInterval = [NaN s; NaN s] (CI 99.9%), Margin = NaN s (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[2.084 s ; 2.084 s) | @
+---------------------------------------------------
+
+BenchmarkService.RunPublishArticle: Job-MIHALS(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+Runtime = .NET 8.0.2 (8.0.224.6711), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 353.456 ms, StdErr = 0.000 ms (0.00%), N = 1, StdDev = 0.000 ms
+Min = 353.456 ms, Q1 = 353.456 ms, Median = 353.456 ms, Q3 = 353.456 ms, Max = 353.456 ms
+IQR = 0.000 ms, LowerFence = 353.456 ms, UpperFence = 353.456 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[353.456 ms ; 353.456 ms) | @
+---------------------------------------------------
+
+BenchmarkService.RunDeleteArticle: Job-MIHALS(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+Runtime = .NET 8.0.2 (8.0.224.6711), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 420.270 ms, StdErr = 0.000 ms (0.00%), N = 1, StdDev = 0.000 ms
+Min = 420.270 ms, Q1 = 420.270 ms, Median = 420.270 ms, Q3 = 420.270 ms, Max = 420.270 ms
+IQR = 0.000 ms, LowerFence = 420.270 ms, UpperFence = 420.270 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[420.270 ms ; 420.270 ms) | @
+---------------------------------------------------
+
+BenchmarkService.RunEditArticle: Job-MIHALS(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+Runtime = .NET 8.0.2 (8.0.224.6711), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 419.582 ms, StdErr = 0.000 ms (0.00%), N = 1, StdDev = 0.000 ms
+Min = 419.582 ms, Q1 = 419.582 ms, Median = 419.582 ms, Q3 = 419.582 ms, Max = 419.582 ms
+IQR = 0.000 ms, LowerFence = 419.582 ms, UpperFence = 419.582 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[419.582 ms ; 419.582 ms) | @
+---------------------------------------------------
+
+BenchmarkService.RunGetCategoryByName: Job-MIHALS(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+Runtime = .NET 8.0.2 (8.0.224.6711), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 386.315 ms, StdErr = 0.000 ms (0.00%), N = 1, StdDev = 0.000 ms
+Min = 386.315 ms, Q1 = 386.315 ms, Median = 386.315 ms, Q3 = 386.315 ms, Max = 386.315 ms
+IQR = 0.000 ms, LowerFence = 386.315 ms, UpperFence = 386.315 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[386.315 ms ; 386.315 ms) | @
+---------------------------------------------------
+
+BenchmarkService.RunGetCategoryById: Job-MIHALS(InvocationCount=1, IterationCount=1, RunStrategy=Monitoring, UnrollFactor=1)
+Runtime = .NET 8.0.2 (8.0.224.6711), X64 RyuJIT AVX2; GC = Concurrent Workstation
+Mean = 383.537 ms, StdErr = 0.000 ms (0.00%), N = 1, StdDev = 0.000 ms
+Min = 383.537 ms, Q1 = 383.537 ms, Median = 383.537 ms, Q3 = 383.537 ms, Max = 383.537 ms
+IQR = 0.000 ms, LowerFence = 383.537 ms, UpperFence = 383.537 ms
+ConfidenceInterval = [NaN ms; NaN ms] (CI 99.9%), Margin = NaN ms (NaN% of Mean)
+Skewness = NaN, Kurtosis = NaN, MValue = 2
+-------------------- Histogram --------------------
+[383.537 ms ; 383.537 ms) | @
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet v0.13.12, Windows 11 (10.0.22631.3447/23H2/2023Update/SunValley3)
+13th Gen Intel Core i7-13700F, 1 CPU, 24 logical and 16 physical cores
+.NET SDK 8.0.200
+  [Host]     : .NET 8.0.2 (8.0.224.6711), X64 RyuJIT AVX2
+  Job-MIHALS : .NET 8.0.2 (8.0.224.6711), X64 RyuJIT AVX2
+
+InvocationCount=1  IterationCount=1  RunStrategy=Monitoring  
+UnrollFactor=1  
+
+| Method                            | Mean       | Error |
+|---------------------------------- |-----------:|------:|
+| RunLoadArticles                   |   520.2 ms |    NA |
+| RunGetAllArticles                 | 1,537.8 ms |    NA |
+| RunGetAllCategories               |   345.0 ms |    NA |
+| RunGetArticlesWithCategoriesModel | 1,643.9 ms |    NA |
+| RunSearch                         | 2,083.6 ms |    NA |
+| RunPublishArticle                 |   353.5 ms |    NA |
+| RunDeleteArticle                  |   420.3 ms |    NA |
+| RunEditArticle                    |   419.6 ms |    NA |
+| RunGetCategoryByName              |   386.3 ms |    NA |
+| RunGetCategoryById                |   383.5 ms |    NA |
+
+// * Legends *
+  Mean  : Arithmetic mean of all measurements
+  Error : Half of 99.9% confidence interval
+  1 ms  : 1 Millisecond (0.001 sec)
+
+// ***** BenchmarkRunner: End *****
+Run time: 00:00:09 (9.9 sec), executed benchmarks: 10
+
+Global total time: 00:00:12 (12.41 sec), executed benchmarks: 10
+// * Artifacts cleanup *
+Artifacts cleanup is finished
