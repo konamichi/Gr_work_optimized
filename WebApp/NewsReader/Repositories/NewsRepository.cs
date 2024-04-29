@@ -12,7 +12,7 @@ namespace NewsReader.Repositories
         public async Task<List<Article>> GetAllArticlesAsync(CancellationToken cancellationToken = default) =>
             await _dataContext.Articles.AsNoTracking().ToListAsync(cancellationToken);
 
-        public async Task<List<Category>> GetAllCategories(CancellationToken cancellationToken = default) =>
+        public async Task<List<Category>> GetAllCategoriesAsync(CancellationToken cancellationToken = default) =>
             await _dataContext.Categories.AsNoTracking().ToListAsync(cancellationToken);
 
         public async Task LoadArticlesAsync(NewsApiModel newsModel, string category, CancellationToken cancellationToken = default)

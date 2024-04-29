@@ -7,10 +7,39 @@ using Newtonsoft.Json;
 
 namespace NewsReader.Services
 {
-    public class NewsService(IConfiguration config, NewsRepository newsRepository)
+    public class NewsService(IConfiguration config, IMemoryCache cache, NewsRepository newsRepository)
     {
         private readonly IConfiguration _config = config;
+        private readonly IMemoryCache _cache = cache; 
         private readonly NewsRepository _newsRepository = newsRepository;
+
+        private async Task<List<Category>> GetCategoriesFromCacheAsync(CancellationToken cancellationToken = default)
+        {
+            _cache.TryGetValue("all_categories", out List<Category>? categories);
+
+            if (categories == null)
+            {
+                var categoriesFromDb = await _newsRepository.GetAllCategoriesAsync(cancellationToken);
+
+                categories = _cache.Set("all_categories", categoriesFromDb, new MemoryCacheEntryOptions().SetAbsoluteExpiration(TimeSpan.FromDays(1)));
+            }
+
+            return categories;
+        }
+
+        private async Task<Category> GetCategoryByIdFromCacheAsync(int id, CancellationToken cancellationToken = default)
+        {
+            var categories = await GetCategoriesFromCacheAsync(cancellationToken);
+
+            return categories.First(c => c.Id == id);
+        }
+
+        private async Task<Category> GetCategoryByNameFromCacheAsync(string name, CancellationToken cancellationToken = default)
+        {
+            var categories = await GetCategoriesFromCacheAsync(cancellationToken);
+
+            return categories.First(c => c.CategoryName == name);
+        }
 
         public async Task LoadArticlesAsync(NewsApiModel newsModel, string category, CancellationToken cancellationToken = default) =>
             await _newsRepository.LoadArticlesAsync(newsModel, category, cancellationToken);
@@ -25,10 +54,10 @@ namespace NewsReader.Services
             await _newsRepository.DeleteArticleAsync(id, cancellationToken);
 
         public async Task<Category> GetCategoryAsync(string name, CancellationToken cancellationToken = default) =>
-            await _newsRepository.GetCategoryAsync(name, cancellationToken);
+            await GetCategoryByNameFromCacheAsync(name, cancellationToken);
 
         public async Task<Category> GetCategoryAsync(int id, CancellationToken cancellationToken = default) =>
-            await _newsRepository.GetCategoryAsync(id, cancellationToken);
+            await GetCategoryByIdFromCacheAsync(id, cancellationToken);
         
         public async Task<NewsApiModel?> DownloadArticlesFromApiAsync(string q, CancellationToken cancellationToken = default)
         {   
@@ -60,7 +89,7 @@ namespace NewsReader.Services
             };
 
             var articles = await _newsRepository.GetAllArticlesAsync(cancellationToken);
-            var categories = await _newsRepository.GetAllCategories(cancellationToken);
+            var categories = await GetCategoriesFromCacheAsync(cancellationToken);
 
             foreach (var category in categories)
             {

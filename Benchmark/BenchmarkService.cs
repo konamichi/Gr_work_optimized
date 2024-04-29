@@ -1,5 +1,6 @@
 using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Engines;
+using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Configuration;
 using NewsReader.Data;
 using NewsReader.Models;
@@ -22,9 +23,10 @@ namespace BenchmarkWebApp
             .Build();
 
             var dataContext = new DataContext(config);
+            var memoryCache = new MemoryCache(new MemoryCacheOptions());
 
             _repository = new NewsRepository(dataContext);
-            _service = new NewsService(config, _repository);
+            _service = new NewsService(config, memoryCache, _repository);
         }
 
         [Benchmark]
@@ -63,7 +65,7 @@ namespace BenchmarkWebApp
         public void RunGetAllArticles() => _repository.GetAllArticlesAsync().Wait();
         
         [Benchmark]
-        public void RunGetAllCategories() => _repository.GetAllCategories().Wait();
+        public void RunGetAllCategories() => _repository.GetAllCategoriesAsync().Wait();
         
         [Benchmark]
         public void RunGetArticlesWithCategoriesModel() => _service.GetArticlesWithCategoriesModelAsync().Wait();
