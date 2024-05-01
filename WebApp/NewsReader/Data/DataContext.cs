@@ -1,14 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 namespace NewsReader.Data
 {
-    public class DataContext : DbContext
+    public class DataContext(IConfiguration config) : DbContext
     {
-        private readonly IConfiguration _config;
-
-        public DataContext(IConfiguration config)
-        {
-            _config = config;
-        }
+        private readonly IConfiguration _config = config;
 
         public DbSet<Article> Articles { get; set; }
         public DbSet<Category> Categories { get; set;}

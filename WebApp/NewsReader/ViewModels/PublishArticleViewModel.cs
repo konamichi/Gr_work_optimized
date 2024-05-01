@@ -2,7 +2,7 @@ namespace NewsReader.ViewModels
 {
     public class PublishArticleModelViewModel
     {
-        public int CategoryName { get; set; } 
+        public string CategoryName { get; set; } 
         public string Name { get; set; } 
         public string Author { get; set; } 
         public string Title { get; set; } 

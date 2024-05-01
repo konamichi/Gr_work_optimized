@@ -1,0 +1,1 @@
+function continueReading(n){window.open(n,"_blank")}

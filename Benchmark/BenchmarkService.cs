@@ -88,12 +88,12 @@ namespace BenchmarkWebApp
         }).Wait();
 
         [Benchmark]
-        public void RunDeleteArticle() => _service.DeleteArticleAsync(923138).Wait();
+        public void RunDeleteArticle() => _service.DeleteArticleAsync(159137).Wait();
 
         [Benchmark]
         public void RunEditArticle() => _service.EditArticleAsync(new EditArticleModel
         {
-            Id = 157133,
+            Id = 159136,
             CategoryId = 1,
             Name = "тест",
             Author = "тест",
